@@ -1,0 +1,27 @@
+server:
+  port: 8081
+#jdbc
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/sys
+    username: root
+    password: root123
+#mybaits
+mybatis:
+  #configuration: 有了通用mapper 不需要设置驼峰了
+  #map-underscore-to-camel-case: true
+  type-aliases-package: cn.itcast.user.pojo
+  # mapper-locations: mapper/*.xml 此处用通用mapper，无需mapper文件
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    #每隔30s发送一次心跳
+    #lease-renewal-interval-in-seconds: 30
+    #90s后如果还没有发送心跳就是挂了
+    #lease-expiration-duration-in-seconds: 90

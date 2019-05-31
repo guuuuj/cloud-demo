@@ -1,0 +1,32 @@
+server:
+  port: 10010
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    #zuul里面默认把eureka里的服务都拉取下来 所以下一步不需要,http://localhost:10010/user-service/user/1
+    user-service: /user/**
+    #若不想在url中加上服务名user-service，可以用以下配置，
+    #user-service:
+      #path: /user/**
+      #serviceId: user-service
+      #是否去掉/user/**中的user
+      #strip-prefix: false
+  #因为默认全部拉取，所以可以人为的设置某个服务不被拉取
+  ignored-services:
+    - consumer-service
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+ribbon:
+  ConnectionTimeout: 500
+  ReadTimeout: 2000
