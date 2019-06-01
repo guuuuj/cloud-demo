@@ -1,13 +1,12 @@
 server:
-  port: 8088
-#jdbc
+  port: 8098
 spring:
   application:
     name: consumer-service
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+      defaultZone: http://127.0.0.1:10089/eureka
     #每隔多久拉去一次服务列表
     registry-fetch-interval-seconds: 3
   instance:
@@ -17,11 +16,11 @@ eureka:
 feign:
   hystrix:
     enabled: true
-ribbon:
+#ribbon:
   #连接超时时长
-  ConnectionTimeOut: 500
+  #ConnectionTimeOut: 500
   #读取超时时长
-  ReadTimeOut: 2000
+  #ReadTimeOut: 2000
 #默认为轮询，自定义负载均衡算法：随机
 #user-service:
 #  ribbon:
