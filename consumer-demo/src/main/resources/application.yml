@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8091
 #jdbc
 spring:
   application:
@@ -7,7 +7,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+      defaultZone: http://127.0.0.1:10088/eureka
     #每隔多久拉去一次服务列表
     registry-fetch-interval-seconds: 3
   instance:

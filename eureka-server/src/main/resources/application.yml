@@ -1,5 +1,5 @@
 server:
-  port: 10086
+  port: 10088
 #给eureka起名
 spring:
   application:
@@ -8,7 +8,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10087/eureka
+      defaultZone: http://127.0.0.1:10086/eureka
     #不在启动时注册自己
     register-with-eureka: false
   #失效剔除，30s后会清除所有失效实例
