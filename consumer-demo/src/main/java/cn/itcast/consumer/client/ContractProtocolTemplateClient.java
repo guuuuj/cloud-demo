@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "user-service",fallback = ContractProtocolTemplateClientImpl.class)
 public interface ContractProtocolTemplateClient {
 
-    @GetMapping("contract/templateId")
+    @GetMapping("contract/template")
     ContractProtocolTemplate queryContract(@RequestParam("templateId") String templateId);
 }
