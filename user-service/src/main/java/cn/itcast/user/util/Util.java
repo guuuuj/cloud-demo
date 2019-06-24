@@ -48,7 +48,7 @@ public class Util {
     }
 
     /**
-     * @Description 计算日期
+     * @Description 从枚举类中配对key值
      * @Author G.J.
      **/
     public static String date(String date) {
@@ -63,29 +63,6 @@ public class Util {
             }
         }
         return returnDate;
-    }
-
-    public static String date1(String date) {
-        String str = "";
-        String st = "";
-        String[] st1 = null;
-        try {
-            Class clazz = Class.forName("cn.itcast.user.conf.Conf");
-            Field[] fields = clazz.getFields();
-            for (Field field : fields) {
-                st = (String) field.get(clazz);
-                st1 = st.split(",");
-                if ((st1[0]).equals(date)) {
-                    str = st1[1];
-                }
-                System.out.println(field.getName() + " " + field.get(clazz));
-            }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        return str;
     }
 
     /*

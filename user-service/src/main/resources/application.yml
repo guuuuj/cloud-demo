@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: user-service
+  profiles:
+    include: conf
   datasource:
     url: jdbc:mysql://rm-uf64qgwq46xmxgd70wo.mysql.rds.aliyuncs.com:3306/core
     username: xsyrdev
@@ -23,3 +25,4 @@ eureka:
     #lease-renewal-interval-in-seconds: 30
     #90s后如果还没有发送心跳就是挂了
     #lease-expiration-duration-in-seconds: 90
+

@@ -1,0 +1,4 @@
+conf:
+  #测试url
+  upload: https://phototest.piaoyoubang.com/api/uploadPic/billupload
+  token: dkADpfyhCsxpgn0g3vR

@@ -30,21 +30,10 @@ public class replaceMSG {
         }
     }*/
 
-    /*public static void main(String[] args) {
-        Util.date1("2019-01-01");
-    }*/
     public static void main(String[] args) {
-        /*int betweenDays;
-        try {
-            String curDate = getCurrentFormatDate("yyyy-MM-dd");
-            String curDateStamp = dateToStamp(curDate, "yyyy-MM-dd");
-            String inRushDateStamp = dateToStamp("2019-07-07","yyyy-MM-dd");
-            betweenDays = (int) ((Long.parseLong(inRushDateStamp) - Long.parseLong(curDateStamp)) / ONE_DAY_STAMP);
-            System.out.println(betweenDays);
-            //Util.date1("2019-01-01");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }*/
+        Util.date("2019-01-01");
+    }
+   /* public static void main(String[] args) {
         String st = "";
         String[] st1 = null;
         int betweenDays = 0;
@@ -69,7 +58,7 @@ public class replaceMSG {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public static String dateToStamp(String date, String timeFormat) {
         SimpleDateFormat simpleDateFormat = null;
